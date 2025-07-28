@@ -1,0 +1,127 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with galaxy background */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #00cfff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Navigation */
+nav {
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #00cfff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Sections */
+section {
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00cfff;
+}
+
+/* Headings */
+h2 {
+  color: #00cfff;
+  margin-bottom: 15px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00cfff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #009acd;
+}
+
+/* Form */
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  background: #00cfff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background: #008bb3;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #aaa;
+  font-size: 0.9em;
+}

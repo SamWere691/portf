@@ -24,15 +24,12 @@
     }
     
     body {
-  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-  color: var(--text);
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-              url('https://th.bing.com/th/id/R.e62bc0333c33bd54713eae2f64e0582f?rik=4S%2bYg1IM8xW%2fVA&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f36600000%2fTigers-image-tigers-36642865-1600-1200.jpg&ehk=GCqETM5Kew5SJNjLqG%2fjBOYzkACjNqPeEstlfPsblwA%3d&risl=&pid=ImgRaw&r=0') no-repeat center center fixed;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), /* Dark overlay */
+    url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') 
+    no-repeat center center fixed;
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
 }
     
     /* Typography */
@@ -581,8 +578,8 @@
       }
       
       .profile-picture {
-        width: 300px;
-        height: 300px;
+        width: 130px;
+        height: 130px;
       }
       
       h1 { font-size: 2rem; }
@@ -628,6 +625,44 @@
         font-size: 1.3rem;
       }
     }
+    /* ====== TIMELINE DATE POSITION FIX ====== */
+.timeline::before {
+  left: 80px; /* Move line right to give dates space */
+}
+
+.timeline-item::before {
+  left: 74px; /* Align dots with moved line */
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  width: 70px; /* Fixed width for dates */
+  text-align: right;
+  padding-right: 15px; /* Breathing room */
+  box-sizing: border-box;
+}
+
+.timeline-content {
+  margin-left: 100px; /* Push content right of dates */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 60px;
+  }
+  .timeline-item::before {
+    left: 54px;
+  }
+  .timeline-date {
+    width: 50px;
+    font-size: 0.9rem;
+  }
+  .timeline-content {
+    margin-left: 70px;
+  }
+}
   </style>
 </head>
 <body>
@@ -691,35 +726,33 @@
       </div>
     </section>
 
-    <!-- Education Section -->
+   <!-- Education Section -->
     <section id="education" class="container">
       <h2 class="section-title">Education</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">2005-2013</div>
           <div class="timeline-content">
             <h3>Primary School</h3>
             <p>Crystal Hill Academy</p>
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-date">2014-2017</div>
           <div class="timeline-content">
             <h3>Secondary School</h3>
             <p>Kapsabet High School</p>
           </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-date">2018-Present</div>
           <div class="timeline-content">
             <h3>Jomo Kenyatta University</h3>
             <p>BSc. Mathematics & Computer Science</p>
           </div>
         </div>
       </div>
-      <!-- Replace the existing CV button/link with this -->
-<a href="cv.word" download="Samuel_Were_CV.docx" class="btn">
-  <i class="fas fa-download"></i> Download My CV
+<a href="cv.word" 
+   download="Samuel_Were_CV.docx" 
+   class="btn">
+  <i class="fas fa-download"></i> Download CV
 </a>
     </section>
 
